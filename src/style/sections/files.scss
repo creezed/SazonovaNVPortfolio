@@ -1,0 +1,37 @@
+.files {
+  padding: $offset-xl 0;
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 24px;
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 14px;
+    }
+  }
+  &-item {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 10px 10px 30px -15px rgba(34, 60, 80, 0.2);
+    transition: $transition;
+    user-select: none;
+    &__icon {
+      width: 40px;
+      height: 40px;
+      color: $accent-color-dark;
+    }
+
+    &:hover {
+      background-color: darken(#fff, 4);
+    }
+    &:active {
+      background-color: darken(#fff, 10);
+      transform: scale(0.98);
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.links {
+  padding: $offset-xl 0;
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 24px;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 14px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    &__icon {
+      color: $accent-color-dark;
+      min-width: 22px;
+      min-height: 22px;
+      max-width: 22px;
+      max-height: 22px;
+    }
+  }
+}
+
+.other-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  & > .links-item:hover {
+    text-decoration: underline;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__picture {
+    overflow: hidden;
+    border-radius: 24px;
+    max-width: 50%;
+    min-height: 50%;
+    box-shadow: 2px 2px 20px -5px rgba(34, 60, 80, 0.2);
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @include tablet {
+      min-width: 100%;
+      height: 400px;
+    }
+  }
+}

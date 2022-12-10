@@ -1,0 +1,32 @@
+// Zero_style
+@import "./scss/zeroStyle";
+
+// Var
+@import "./scss/_fonts";
+@import "./scss/_var";
+@import "./scss/_function";
+@import "./scss/_mixin";
+
+// Common
+@import "./common/common.scss";
+@import "./common/margins.scss";
+@import "./common/typography.scss";
+
+// UI
+@import "./ui/btn.scss";
+
+// Components
+@import "./components/header.scss";
+@import "./components/slider.scss";
+@import "./components/footer.scss";
+@import "./components/navbar.scss";
+
+// Sections
+@import "./sections/hero.scss";
+@import "./sections/about.scss";
+@import "./sections/achievements.scss";
+@import "./sections/activity.scss";
+@import "./sections/certificates.scss";
+@import "./sections/links.scss";
+@import "./sections/files.scss";
+@import "./sections/contacts.scss";

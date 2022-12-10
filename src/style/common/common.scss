@@ -1,0 +1,16 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: 100%;
+  -webkit-tap-highlight-color: transparent;
+  @include tablet {
+    font-size: 80%;
+  }
+}
+
+.wrapper {
+  max-width: $wrapper;
+  margin: 0 auto;
+  padding: 0 15px;
+}

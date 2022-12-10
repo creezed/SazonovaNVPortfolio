@@ -1,0 +1,25 @@
+@import "./_function";
+
+// var
+$wrapper: 1170px;
+
+$bg-color: #fbfbfb;
+$accent-color: #e0efea;
+$accent-color-dark: #677c77;
+$text-color: #404040;
+
+$header-hight: 80px;
+
+$offset-xl: rem(120);
+$offset-l: rem(96);
+$offset-m: rem(64);
+
+$fw-bold: 700;
+$fw-regular: 400;
+$headline-size-xl: rem(48);
+$headline-size-l: rem(36);
+$body-size-xl: rem(20);
+$body-size-l: rem(18);
+$body-size-m: 16px;
+$body-size-s: rem(14);
+$transition: 0.2s ease;

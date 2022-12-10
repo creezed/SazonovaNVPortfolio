@@ -1,0 +1,107 @@
+.navbar {
+  display: none;
+  transform: translate(-100%);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  padding: 8px;
+  box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);
+  transition: $transition;
+  z-index: 950;
+
+  @include tablet {
+    display: block;
+  }
+  &__wrapper {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    transition: $transition;
+    @include tablet {
+      display: block;
+    }
+
+    &.open {
+      z-index: 700;
+      &::after {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &.open > .navbar {
+      transform: translateX(0%);
+    }
+
+    &::after {
+      content: "";
+      position: fixed;
+      display: block;
+      inset: 0;
+      background-color: transparent;
+      z-index: 600;
+    }
+  }
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &__link {
+      display: block;
+      padding: 16px;
+      background-color: darken(#fff, 8);
+      border-radius: 12px;
+    }
+  }
+}
+
+.ham {
+  position: fixed;
+  right: 4px;
+  top: 4px;
+  z-index: 1000;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: $accent-color-dark;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+.ham1 .top {
+  stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+  stroke-dasharray: 40 180;
+}
+.ham1.active .top {
+  stroke-dashoffset: -98px;
+}
+.ham1.active .bottom {
+  stroke-dashoffset: -138px;
+}
